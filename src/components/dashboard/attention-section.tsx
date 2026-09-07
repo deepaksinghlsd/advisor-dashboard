@@ -24,7 +24,7 @@ export function AttentionSection({ data }: { data: ClientsNeedingAttention }) {
             {data.count}
           </span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 lg:hidden">
           <button
             type="button"
             aria-label="Scroll left"
@@ -45,7 +45,7 @@ export function AttentionSection({ data }: { data: ClientsNeedingAttention }) {
       </div>
       <div
         ref={scrollRef}
-        className="flex flex-1 gap-4 overflow-x-auto pb-1 snap-x snap-mandatory [scrollbar-width:thin]"
+        className="flex flex-1 gap-4 overflow-x-auto pb-1 snap-x snap-mandatory [scrollbar-width:thin] lg:grid lg:grid-cols-2 lg:overflow-visible xl:grid-cols-4"
       >
         {data.cards.map((card) => (
           <AttentionCard key={card.name} card={card} />
