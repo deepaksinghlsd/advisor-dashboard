@@ -35,7 +35,7 @@ export function AttentionCard({ card }: { card: AttentionCardData }) {
   const CtaIcon = cta?.icon;
 
   return (
-    <div className="relative flex h-full w-[280px] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-black/5 bg-white shadow-sm sm:w-[300px] lg:w-auto lg:shrink">
+    <div className="relative flex h-full w-[280px] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-black/5 bg-white shadow-sm sm:w-[300px]">
       <span
         className={`absolute inset-y-0 left-0 w-1 ${ACCENT_BAR[card.badgeColor ?? "orange"]}`}
       />
